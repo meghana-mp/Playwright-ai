@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "/api/success"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"message\": \"Meghana, your mock is working!\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "DELETE",
+    "url": "/api/users/101"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"message\": \"User 1 has been permanently removed.\"}",
+    "headers": { "Content-Type": "application/json" }
+  }
+}

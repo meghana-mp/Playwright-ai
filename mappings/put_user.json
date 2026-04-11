@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "PUT",
+    "url": "/api/users/101"
+  },
+  "response": {
+    "status": 200,
+    "body": "{\"status\": \"Updated successfully\"}"
+  }
+}

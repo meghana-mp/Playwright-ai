@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "url": "/api/users"
+  },
+  "response": {
+    "status": 201,
+    "body": "{\"status\": \"User created successfully!\"}",
+    "headers": {
+      "Content-Type": "application/json"
+    }
+  }
+}
