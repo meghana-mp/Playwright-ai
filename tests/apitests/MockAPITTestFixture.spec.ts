@@ -1,5 +1,5 @@
 // tests/api.spec.ts
-import { test, expect } from '../fixtures/wiremockFixture';
+import { test, expect } from '../../fixtures/wiremockFixture';
 
 test('verify my success mapping', async ({ request, wiremock }) => {
   const response = await request.get('http://localhost:9090/api/success');
