@@ -4,13 +4,6 @@ playwright-report/
 blob-report/
 playwright/.cache/
 
-# Playwright
-node_modules/
-/test-results/
-/playwright-report/
-/blob-report/
-/playwright/.cache/
-/playwright/.auth/
 # WireMock generated files
 mappings/
 __files/
