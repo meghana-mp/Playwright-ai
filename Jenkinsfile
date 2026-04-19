@@ -32,7 +32,7 @@ pipeline {
             steps {
                 // The '|| true' ensures that even if tests fail, the pipeline 
                 // doesn't stop, allowing the report to be generated.
-                sh 'npx playwright test --project=chromium || true'
+                sh 'npx playwright test --project=chromium --reporter=line,allure-playwright || true'
             }
         }
     }
@@ -50,6 +50,11 @@ pipeline {
             ])
             
             // Stores the raw report files as artifacts
+            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+            // 2. Allure Report Generation
+            // 'results' path must match the folder where Playwright saves allure data (usually 'allure-results')
+            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+
             archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
 
             // 3. Send the Email with the Report Attached
