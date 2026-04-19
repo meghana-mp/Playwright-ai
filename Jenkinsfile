@@ -5,7 +5,6 @@ pipeline {
         // This MUST match the name you gave in 'Global Tool Configuration'
         nodejs 'NodeJS' 
         allure 'allure-cli'
-        allurePlaywright 'allure-playwright'
     }
 
     stages {
