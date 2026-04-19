@@ -9,7 +9,9 @@
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
+    "@applitools/eyes-playwright": "^1.46.4",
     "@playwright/test": "^1.59.1",
-    "@types/node": "^25.6.0"
+    "@types/node": "^25.6.0",
+    "allure-playwright": "^3.7.1"
   }
 }

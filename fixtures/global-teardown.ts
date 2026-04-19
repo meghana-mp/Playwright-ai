@@ -9,8 +9,12 @@ async function globalTeardown(config: FullConfig) {
       console.log(`Sending SIGTERM to WireMock process ${pid}`);
       process.kill(pid, 'SIGTERM');
       console.log(`WireMock process ${pid} stopped.`);
-    } catch (e) {
-      console.error(`Failed to kill WireMock process ${pid}:`, e);
+    } catch (e: any) {
+      if (e.code === 'ESRCH') {
+        console.log('WireMock already stopped');
+      } else {
+        console.error(`Failed to kill WireMock process ${pid}:`, e);
+      }
     }
     fs.unlinkSync('wiremock.pid');
   }

@@ -3,9 +3,12 @@ test-results/
 playwright-report/
 blob-report/
 playwright/.cache/
+allure-reports/
+allure-results/
 
 # WireMock generated files
 mappings/
 __files/
-
+.png
+.md
 .env
