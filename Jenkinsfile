@@ -53,7 +53,10 @@ pipeline {
             archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             // 2. Allure Report Generation
             // 'results' path must match the folder where Playwright saves allure data (usually 'allure-results')
-            allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+            allure includeProperties: false, 
+               jdk: '', 
+               results: [[path: 'allure-results']], 
+               tool: 'allure-cli' // Use the name you defined in Global Tools
 
             archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
 
