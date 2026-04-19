@@ -4,7 +4,8 @@ pipeline {
     tools {
         // This MUST match the name you gave in 'Global Tool Configuration'
         nodejs 'NodeJS' 
-        'org.allurereport.jenkins.AllureCommandlineInstallation' 'allure-cli'
+        allure 'allure-cli'
+        allurePlaywright 'allure-playwright'
     }
 
     stages {
