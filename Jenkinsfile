@@ -4,6 +4,7 @@ pipeline {
     tools {
         // This MUST match the name you gave in 'Global Tool Configuration'
         nodejs 'NodeJS' 
+        'org.allurereport.jenkins.AllureCommandlineInstallation' 'allure-cli'
     }
 
     stages {
@@ -53,8 +54,6 @@ pipeline {
             archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
             // 2. Allure Report Generation
             // 'results' path must match the folder where Playwright saves allure data (usually 'allure-results')
-            def allureHome = tool name: 'allure-cli', type: 'org.allurereport.jenkins.AllureCommandlineInstallation'
-            
             allure includeProperties: false, 
                    jdk: '', 
                    results: [[path: 'allure-results']]
